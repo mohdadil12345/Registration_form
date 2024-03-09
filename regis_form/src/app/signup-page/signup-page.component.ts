@@ -28,17 +28,30 @@ export class SignupPageComponent {
     alert("Registration Successfull");
     console.log(user)
 
-    let lsdata = localStorage.getItem("user_data")
 
-    if(lsdata){
-      let user_array = JSON.parse(lsdata)
-      user_array.push(user)
 
-      localStorage.setItem("user_data", JSON.stringify(user_array))
-    }else{
+let lsdata : any[] = JSON.parse(localStorage.getItem("signup_user") || "[]")
 
-      localStorage.setItem("user_data", JSON.stringify([user]))
-    }
+if(lsdata) {
+  lsdata.push(user)
+  localStorage.setItem("signup_user", JSON.stringify(lsdata))
+
+}else{
+  localStorage.setItem("signup_user", JSON.stringify([user]))
+}
+
+
+    // let lsdata = localStorage.getItem("user_data")
+
+    // if(lsdata){
+    //   let user_array = JSON.parse(lsdata)
+    //   user_array.push(user)
+
+    //   localStorage.setItem("user_data", JSON.stringify(user_array))
+    // }else{
+
+    //   localStorage.setItem("user_data", JSON.stringify([user]))
+    // }
 
 
     this.username = ""
