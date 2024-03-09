@@ -1,1 +1,23 @@
-<p>signup-page works!</p>
+
+
+<form (ngSubmit) = "handle_signup()" class="form1">
+    <h3 >Signup</h3>
+    <label htmlFor="">Username</label>
+    <input  type="text" placeholder="Username" />
+
+    <label htmlFor="">Email</label>
+    <input  type="Email" placeholder="email" />
+
+    <label htmlFor="">Password</label>
+    <input placeholder="Password" />
+
+
+    <button type="submit" class="signup_btn">
+       Signup
+    </button>
+
+    <div>
+      <button class="google">Google</button>
+      <button class="facebook">Facebook</button>
+    </div>
+  </form>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SignupPageComponent {
 
+
+
+  handle_signup() {
+    console.log("form submit")
+  }
+
 }
