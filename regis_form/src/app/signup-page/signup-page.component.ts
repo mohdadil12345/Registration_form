@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-page',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './signup-page.component.css'
 })
 export class SignupPageComponent {
+
+
+  constructor (private router : Router) {}
 
   username : string  = "";
   email : string = "";
@@ -21,7 +25,7 @@ export class SignupPageComponent {
   }
 
   if (this.username && this.email && this.password) {
-    alert("Form submitted");
+    alert("Registration Successfull");
     console.log(user)
 
     let lsdata = localStorage.getItem("user_data")
@@ -40,6 +44,10 @@ export class SignupPageComponent {
     this.username = ""
     this.email = ""
     this.password = ""
+
+
+    this.router.navigate(['login'])
+
 
 
   } else {
