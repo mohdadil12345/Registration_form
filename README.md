@@ -29,7 +29,7 @@ Registration is a assignment for the user signup
 
 ## Screenshots
 
-![Screenshot 1](src\assets\login1.png)
+![Screenshot 1](./regis_form/src\assets\login1.png)
 
 
 
